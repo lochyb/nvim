@@ -13,6 +13,8 @@ vim.g.incsearch = true
 vim.g.smartcase = true
 vim.g.hlsearch = true
 
+vim.g.list = true
+
 vim.opt.spell = true
 vim.opt.spelllang = { 'en_us' }
 

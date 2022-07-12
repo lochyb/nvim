@@ -6,7 +6,7 @@ require "lochyb.theme"
 require "lochyb.autoComplete"
 require "lochyb.autopairs"
 require "lochyb.gitsigns"
-require "lochyb.bufferline"
+-- require "lochyb.bufferline"
 require "lochyb.lualine"
 require "lochyb.whichkey"
 
