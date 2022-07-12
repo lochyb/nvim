@@ -9,7 +9,6 @@ require "lochyb.gitsigns"
 require "lochyb.bufferline"
 require "lochyb.lualine"
 require "lochyb.whichkey"
-require "lochyb.zenMode"
 
 
 require("nvim-tree").setup()
