@@ -20,7 +20,7 @@ require("packer").startup(function()
     use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
 
     use("folke/which-key.nvim")
-    use "terrortylor/nvim-comment"
+    use "numToStr/Comment.nvim"
     use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     -- 	use("folke/tokyonight.nvim")
