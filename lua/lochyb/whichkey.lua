@@ -85,9 +85,9 @@ local opts = {
 }
 
 local mappings = {
+    ["a"] = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
     ["e"] = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Show Error" },
-    ["b"] = { "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
-        "Buffers" },
+    ["b"] = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
     ["x"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Quit" },

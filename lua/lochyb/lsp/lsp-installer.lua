@@ -4,6 +4,11 @@ if not status_ok then
 end
 
 require("nvim-lsp-installer").setup {}
+require("nvim-lsp-installer").setup
+{
+	on_attach = require('lochyb.lsp.handlers').on_attach,
+	capabilities = require('lochyb.lsp.handlers').capabilities,
+}
 local lspconfig = require("lspconfig")
 
 lspconfig.sumneko_lua.setup {}
