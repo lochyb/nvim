@@ -14,7 +14,6 @@ M.setup = function()
   end
 
   local config = {
-    -- disable virtual text
     virtual_text = true,
     -- show signs
     signs = {
@@ -64,7 +63,7 @@ local function lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true }
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+  vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 end
 
 M.on_attach = function(client, bufnr)
@@ -73,6 +72,32 @@ M.on_attach = function(client, bufnr)
   end
   lsp_keymaps(bufnr)
   lsp_highlight_document(client)
+  if client.name == "sumneko_lua" then
+    client.settings = {
+      Lua = {
+        runtime = {
+          -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+          version = "LuaJIT",
+          -- Setup your lua path
+          path = M.path(),
+        },
+        completion = { callSnippet = "Replace" },
+        diagnostics = {
+        --   -- Get the language server to recognize the `vim` global
+          globals = { "vim" },
+        },
+        hint = { enable = true },
+        workspace = {
+          -- Make the server aware of Neovim runtime files
+          library = M.library(opts),
+          maxPreload = 1000,
+          preloadFileSize = 150,
+        },
+        -- Do not send telemetry data containing a randomized but unique identifier
+        telemetry = { enable = false },
+      },
+    }
+  end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
