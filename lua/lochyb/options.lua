@@ -15,8 +15,8 @@ vim.g.hlsearch = true
 
 vim.g.list = true
 
-vim.opt.spell = true
-vim.opt.spelllang = { "en_us" }
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { "en_us" }
 
 vim.bo.textwidth = 80
 vim.bo.expandtab = true

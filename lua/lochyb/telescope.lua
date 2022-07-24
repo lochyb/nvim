@@ -1,6 +1,5 @@
 require("telescope").setup({
   defaults = {
-    initial_mode = "normal",
     prompt_prefix = "❯ ",
     selection_caret = "❯ ",
     sorting_strategy = "descending",
@@ -29,6 +28,7 @@ require("telescope").setup({
   },
   pickers = {
     buffers = {
+      initial_mode = "normal",
       sort_lastused = true,
       previewer = false,
       layout_strategy = "horizontal",

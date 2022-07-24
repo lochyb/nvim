@@ -37,6 +37,7 @@ packer.startup(function()
   use("rafamadriz/friendly-snippets")
   use("saadparwaiz1/cmp_luasnip")
 
+  use("ray-x/lsp_signature.nvim")
   use("folke/which-key.nvim")
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")

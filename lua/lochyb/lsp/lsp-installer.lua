@@ -33,8 +33,12 @@ lspconfig.sumneko_lua.setup({
   },
 })
 lspconfig.tsserver.setup({
-  on_attach = function(client)
+  on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
+    require("lsp_signature").on_attach({
+      floating_window = false,
+      hint_prefix = "🐏 ",
+    }, bufnr)
   end,
 })
 lspconfig.eslint.setup({})
