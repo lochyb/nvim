@@ -36,18 +36,20 @@ packer.startup(function()
   use("L3MON4D3/LuaSnip")
   use("rafamadriz/friendly-snippets")
   use("saadparwaiz1/cmp_luasnip")
-
   use("ray-x/lsp_signature.nvim")
+
   use("folke/which-key.nvim")
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("windwp/nvim-autopairs")
   use("lewis6991/gitsigns.nvim")
+  use("lukas-reineke/indent-blankline.nvim")
 
   use("kyazdani42/nvim-web-devicons")
   use("nvim-telescope/telescope.nvim")
   use("kyazdani42/nvim-tree.lua")
   use("nvim-lualine/lualine.nvim")
+  use("folke/zen-mode.nvim")
 
   use({
     "folke/trouble.nvim",

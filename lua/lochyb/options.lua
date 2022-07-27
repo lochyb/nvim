@@ -13,15 +13,20 @@ vim.g.incsearch = true
 vim.g.smartcase = true
 vim.g.hlsearch = true
 
-vim.g.list = true
-
 -- vim.opt.spell = true
 -- vim.opt.spelllang = { "en_us" }
 
-vim.bo.textwidth = 80
-vim.bo.expandtab = true
-vim.bo.shiftwidth = 4
-vim.bo.softtabstop = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.textwidth = 80
+
+vim.opt.smartindent = true
+vim.opt.wrap = false
+
+vim.g.list = true
+vim.opt.listchars:append("space:⋅")
 
 vim.wo.number = true
 vim.wo.relativenumber = true
