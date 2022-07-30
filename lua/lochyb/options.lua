@@ -21,9 +21,12 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.textwidth = 80
+vim.opt.scrolloff = 10
 
 vim.opt.smartindent = true
 vim.opt.wrap = false
+vim.opt.foldmethod = 'indent'
+
 
 vim.g.list = true
 vim.opt.listchars:append("space:⋅")

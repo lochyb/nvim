@@ -49,12 +49,14 @@ packer.startup(function()
   use("nvim-telescope/telescope.nvim")
   use("kyazdani42/nvim-tree.lua")
   use("nvim-lualine/lualine.nvim")
-  use("folke/zen-mode.nvim")
 
   use({
     "folke/trouble.nvim",
     config = function()
-      require("trouble").setup({})
+      require("trouble").setup {
+            position = "right",
+                icons = false
+        }
     end,
   })
 end)
