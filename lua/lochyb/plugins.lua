@@ -42,6 +42,7 @@ packer.startup(function()
   use("numToStr/Comment.nvim")
   use("JoosepAlviste/nvim-ts-context-commentstring")
   use("windwp/nvim-autopairs")
+  use("windwp/nvim-ts-autotag")
   use("lewis6991/gitsigns.nvim")
   use("lukas-reineke/indent-blankline.nvim")
 
@@ -53,10 +54,10 @@ packer.startup(function()
   use({
     "folke/trouble.nvim",
     config = function()
-      require("trouble").setup {
-            position = "right",
-                icons = false
-        }
+      require("trouble").setup({
+        position = "right",
+        icons = false,
+      })
     end,
   })
 end)

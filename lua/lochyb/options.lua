@@ -27,6 +27,8 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.foldmethod = 'indent'
 
+-- vim.opt.foldmethod = 'expr'
+-- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.g.list = true
 vim.opt.listchars:append("space:⋅")
