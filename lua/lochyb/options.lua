@@ -1,5 +1,7 @@
 vim.g.mapleader = ","
 vim.g.ruler = true
+vim.g.termguicolors = true
+vim.g.syntax_on = true
 
 vim.g.encoding = "utf-8"
 vim.g.fileencoding = "utf-8"
@@ -26,9 +28,6 @@ vim.opt.scrolloff = 10
 vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.foldmethod = 'indent'
-
--- vim.opt.foldmethod = 'expr'
--- vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 
 vim.g.list = true
 vim.opt.listchars:append("space:⋅")

@@ -20,7 +20,7 @@ require("nightfox").setup({
   palettes = {
     duskfox = {
       fg3 = "#B57614",
-      bg3 = "#458588",
+      bg3 = "#005f87",
     },
   },
 })
@@ -31,4 +31,10 @@ require("indent_blankline").setup({
   show_current_context = true,
   show_current_context_start = true,
   space_char_blankline = " ",
+})
+
+require("colorizer").setup({
+  "*", -- Highlight all files, but customize some others.
+  css = { css = true }, -- Enable parsing rgb(...) functions in css.
+  html = { names = false }, -- Disable parsing "names" like Blue or Gray
 })

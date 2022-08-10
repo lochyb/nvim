@@ -25,6 +25,7 @@ packer.startup(function()
   -- Themes
   -- use("folke/tokyonight.nvim")
   use("EdenEast/nightfox.nvim")
+  use("norcalli/nvim-colorizer.lua")
 
   -- completion plugins
   use("hrsh7th/nvim-cmp")
@@ -55,7 +56,6 @@ packer.startup(function()
     "folke/trouble.nvim",
     config = function()
       require("trouble").setup({
-        position = "right",
         icons = false,
       })
     end,

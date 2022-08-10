@@ -96,6 +96,7 @@ local mappings = {
   ["f"] = { "<cmd>Telescope find_files<cr>", "Find files" },
   ["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
   ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
+  ["T"] = { "<cmd>TroubleToggle<cr>", "Trouble" },
 
   p = {
     name = "Packer",
@@ -167,6 +168,7 @@ local vopts = {
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
 }
+
 local vmappings = {}
 
 which_key.setup(setup)
