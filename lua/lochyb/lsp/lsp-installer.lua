@@ -43,3 +43,4 @@ lspconfig.tsserver.setup({
 })
 lspconfig.eslint.setup({})
 lspconfig.rust_analyzer.setup({})
+lspconfig.phpactor.setup{}
