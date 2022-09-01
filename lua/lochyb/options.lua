@@ -1,6 +1,6 @@
 vim.g.mapleader = ","
 vim.g.ruler = true
-vim.g.termguicolors = true
+vim.o.termguicolors = true
 vim.g.syntax_on = true
 
 vim.g.encoding = "utf-8"

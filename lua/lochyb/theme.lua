@@ -22,10 +22,14 @@ require("nightfox").setup({
       fg3 = "#B57614",
       bg3 = "#005f87",
     },
+    carbonfox = {
+      fg3 = "#9580ff",
+      bg3 = "#9580ff",
+    },
   },
 })
 
-vim.cmd("colorscheme Duskfox")
+vim.cmd("colorscheme carbonfox")
 
 require("indent_blankline").setup({
   show_current_context = true,
