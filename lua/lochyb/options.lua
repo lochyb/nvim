@@ -34,5 +34,3 @@ vim.opt.listchars:append("space:⋅")
 
 vim.wo.number = true
 vim.wo.relativenumber = true
-
-vim.cmd([[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]])

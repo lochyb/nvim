@@ -1,63 +1,47 @@
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  return
+    return
 end
 
-packer.startup(function()
-  use("wbthomason/packer.nvim")
-  use("glepnir/dashboard-nvim")
+return require('packer').startup(function()
+    use("wbthomason/packer.nvim")
 
-  use({
-    "nvim-treesitter/nvim-treesitter",
-    run = function()
-      vim.cmd([[TSUpdate]])
-    end,
-  })
-  use("nvim-lua/plenary.nvim")
+    use("nvim-lua/plenary.nvim")
+    use("nvim-telescope/telescope.nvim")
 
-  -- LSP
-  use("neovim/nvim-lspconfig") -- enable LSP
-  use("williamboman/nvim-lsp-installer") -- simple to use language server installer
-  use("tamago324/nlsp-settings.nvim") -- language server settings defined in json for
-  use("jose-elias-alvarez/null-ls.nvim")
+    -- LSP
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+    use 'neovim/nvim-lspconfig'
+    use 'simrat39/rust-tools.nvim'
 
-  -- Themes
-  -- use("folke/tokyonight.nvim")
-  use("EdenEast/nightfox.nvim")
-  use("norcalli/nvim-colorizer.lua")
+    -- Completion framework:
+    use 'hrsh7th/nvim-cmp'
 
-  -- completion plugins
-  use("hrsh7th/nvim-cmp")
-  use("hrsh7th/cmp-buffer")
-  use("hrsh7th/cmp-path")
-  use("hrsh7th/cmp-cmdline")
-  use("hrsh7th/cmp-nvim-lsp")
+    -- LSP completion source:
+    use 'hrsh7th/cmp-nvim-lsp'
 
-  use("L3MON4D3/LuaSnip")
-  use("rafamadriz/friendly-snippets")
-  use("saadparwaiz1/cmp_luasnip")
-  use("ray-x/lsp_signature.nvim")
+    -- Useful completion sources:
+    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/vim-vsnip'
 
-  use("folke/which-key.nvim")
-  use("numToStr/Comment.nvim")
-  use("JoosepAlviste/nvim-ts-context-commentstring")
-  use("windwp/nvim-autopairs")
-  use("windwp/nvim-ts-autotag")
-  use("lewis6991/gitsigns.nvim")
-  use("lukas-reineke/indent-blankline.nvim")
+    -- Themes
+    use("EdenEast/nightfox.nvim")
 
-  use("kyazdani42/nvim-web-devicons")
-  use("nvim-telescope/telescope.nvim")
-  use("kyazdani42/nvim-tree.lua")
-  use("nvim-lualine/lualine.nvim")
+    -- Keymap Helper
+    use("folke/which-key.nvim")
 
-  use({
-    "folke/trouble.nvim",
-    config = function()
-      require("trouble").setup({
-        icons = false,
-      })
-    end,
-  })
+    -- Git Helper
+    use("lewis6991/gitsigns.nvim")
+
+    -- Sidebar Finder
+    use("kyazdani42/nvim-tree.lua")
+
+    -- Bottom Bar Helper
+    use("nvim-lualine/lualine.nvim")
 end)

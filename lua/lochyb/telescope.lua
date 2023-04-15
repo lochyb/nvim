@@ -34,8 +34,8 @@ require("telescope").setup({
       layout_strategy = "horizontal",
       layout_config = {
         horizontal = {
-          height = 0.35,
-          width = 0.55,
+          height = 0.5,
+          width = 0.75,
           width_padding = 0.04,
           height_padding = 0.1,
           -- preview_width = 0.6,
